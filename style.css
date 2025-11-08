@@ -1,0 +1,75 @@
+.WelcomeWrapper {
+     
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  background-image: url('nnnoise.svg'),
+  linear-gradient(#01191E,#E1F9FE);
+  background-blend-mode: overlay;
+}
+.decorative-line {
+    height: 4px;
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    width: 200px;
+    margin: 20px 0;
+}
+
+#Welcome {
+ background-color: rgba(0, 0, 0, 0.307); 
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #E1F9FE; 
+  position: relative;
+}
+.line {
+  position: absolute;
+  border-top: 1px solid white;
+}
+
+.line-1 {
+  top: 10%;
+  left: 5%;
+  width: 90%;
+}
+
+.line-2 {
+  top: 85%;
+  left: 5%;
+  width: 90%;
+}
+
+.line-3 {
+  top: 25%;
+  left: 15%;
+  width: 70%;
+}
+
+.line-4 {
+  top: 70%;
+  left: 15%;
+  width: 70%;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+button {
+    background-color: #01191E;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    color: #E1F9FE;
+}
+button:hover {
+  background-color: #7BE6F9;
+  color: #01191E;
+  box-shadow:  0 4px 4px rgba(0, 0, 0, 0.5);;
+}
+

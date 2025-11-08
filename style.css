@@ -20,8 +20,8 @@ h2 {
     font-size: 30px;
 }
 #Welcome {
- background-color: rgba(0, 0, 0, 0.307); 
- padding: 40px;
+  background-color: rgba(0, 0, 0, 0.307); 
+  padding: 5%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #E1F9FE; 

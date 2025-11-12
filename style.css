@@ -11,13 +11,57 @@
   linear-gradient(#01191E,#E1F9FE);
   background-blend-mode: overlay;
 }
+
+/*  Float Down Animation:  */
+#Welcome,
+.buttonWrap {
+  opacity: 0;
+  transform: translateY(-18px);
+  will-change: transform, opacity;
+}
+
+@keyframes floatDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  60%  { transform: translateY(8px);  opacity: 1; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+#Welcome {
+  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
+  animation-delay: 200ms; /* start first */
+}
+
+.buttonWrap {
+  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
+  animation-delay: 1s; /* start later */
+}
+
+/* stagger for button */
+.buttonWrap button {
+  transform: translateY(8px);
+  opacity: 0;
+  animation: floatDown 900ms cubic-bezier(.2,.9,.2,1) both;
+}
+.buttonWrap button:nth-child(1){ animation-delay: 560ms; }
+.buttonWrap button:nth-child(2){ animation-delay: 680ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  #Welcome, .buttonWrap, .buttonWrap button {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
 h1 {
-    font-family: "Abril Fatface";
-    font-size: 45px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 3.5vw, 4.5rem);
 }
 h2 {
-    font-family: "Lato";
-    font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(1rem, 1.3vw, 2rem);
+  margin-top: 1rem;
 }
 #Welcome {
   background-color: rgba(0, 0, 0, 0.307); 
@@ -36,13 +80,13 @@ h2 {
 .line-1 {
   top: 10%;
   left: 5%;
-  width: 90%;
+  width: 100%;
 }
 
 .line-2 {
   top: 85%;
   left: 5%;
-  width: 90%;
+  width: 70%;
 }
 
 .line-3 {
@@ -54,14 +98,14 @@ h2 {
 .line-4 {
   top: 70%;
   left: 15%;
-  width: 70%;
+  width: 100%;
 }
-.box-1 {
+.buttonWrap {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   width: 100%;
-  }
+}
 button {
     background-color: transparent;
     border: none;
@@ -71,6 +115,7 @@ button {
     padding-right: 30px;
     transition: all 0.3s;
     position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #E1F9FE;
     z-index: 1;
 }
@@ -119,3 +164,4 @@ button:hover::after {
   opacity: 0; 
   transform: scale(0.1, 1);
 }
+

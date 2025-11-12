@@ -53,13 +53,35 @@
     opacity: 1 !important;
   }
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
 
+ul li {
+  float: none;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
 h1 {
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: clamp(2.5rem, 3.5vw, 4.5rem);
 }
 h2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: clamp(1rem, 1.3vw, 2rem);
   margin-top: 1rem;
 }

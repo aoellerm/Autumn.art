@@ -11,7 +11,13 @@
   linear-gradient(#01191E,#E1F9FE);
   background-blend-mode: overlay;
 }
-
+.logoWrapper {
+  background-color: #0D1E28;
+}
+img[alt='logo'] {
+ width: 10%;
+ height: 5%;
+}
 /*  Float Down Animation:  */
 #Welcome,
 .buttonWrap {
@@ -56,9 +62,9 @@
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #01191E;
 }
 
 ul li {
@@ -74,7 +80,8 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: #7BE6F9;
+  color: #01191E;
 }
 h1 {
   font-family: Georgia, Times, 'Times New Roman', serif;
@@ -98,25 +105,21 @@ h2 {
    background-color: white;
    margin: 1rem auto;
 }
-
 .line-1 {
   top: 10%;
   left: 5%;
   width: 100%;
 }
-
 .line-2 {
   top: 85%;
   left: 5%;
   width: 70%;
 }
-
 .line-3 {
   top: 25%;
   left: 15%;
   width: 70%;
 }
-
 .line-4 {
   top: 70%;
   left: 15%;
@@ -186,4 +189,12 @@ button:hover::after {
   opacity: 0; 
   transform: scale(0.1, 1);
 }
-
+.About {
+  background-color: #0D1E28;
+  color: #E1F9FE;
+}
+.abline {
+   height: 1px;
+  background:linear-gradient(#C92545,#930656,#7BE6F9);
+   margin: 1rem auto; 
+}

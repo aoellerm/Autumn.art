@@ -62,7 +62,7 @@ ul {
 }
 
 ul li {
-  float: none;
+  float: left;
 }
 
 ul li a {

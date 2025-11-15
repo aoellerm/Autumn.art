@@ -1,3 +1,7 @@
+body {
+  background-color: #0D1E28;
+  color: #E1F9FE;
+}
 .WelcomeWrapper {
   height: 100vh;
   width: 100%;
@@ -16,7 +20,7 @@
 }
 img[alt='logo'] {
  width: 10%;
- height: 5%;
+ height: auto;
 }
 /*  Float Down Animation:  */
 #Welcome,
@@ -60,6 +64,7 @@ img[alt='logo'] {
   }
 }
 ul {
+
   list-style-type: none;
   margin: 0;
   padding-left: 0;
@@ -101,9 +106,9 @@ h2 {
   position: relative;
 }
 .line {
-   height: 1px;
-   background-color: white;
-   margin: 1rem auto;
+  height: 1px;
+  background-color: white;
+  margin: 1rem auto;
 }
 .line-1 {
   top: 10%;
@@ -132,17 +137,17 @@ h2 {
   width: 100%;
 }
 button {
-    background-color: transparent;
-    border: none;
-    padding: 15px;
-    font-size: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    transition: all 0.3s;
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #E1F9FE;
-    z-index: 1;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: all 0.3s;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #E1F9FE;
+  z-index: 1;
 }
 button span {
   position: relative;
@@ -189,12 +194,23 @@ button:hover::after {
   opacity: 0; 
   transform: scale(0.1, 1);
 }
-.About {
-  background-color: #0D1E28;
-  color: #E1F9FE;
-}
 .abline {
    height: 1px;
   background:linear-gradient(#C92545,#930656,#7BE6F9);
    margin: 1rem auto; 
+}
+.womp,
+.abtText {
+  display: flex;              /* Enables side-by-side layout */
+  align-items: center;        /* Vertically center text with image */
+  gap: 15%;                   /* Space between image and text */
+  max-width: 70%;
+  margin: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+img[alt='me'] {
+  width: 50%;           
+  height: auto;
+  border-radius: 8px;
 }

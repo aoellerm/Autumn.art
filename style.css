@@ -1,6 +1,17 @@
-body {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #0D1E28;
   color: #E1F9FE;
+}
+.logoWrapper {
+  background-color: #0D1E28;
+  padding: 8px;
+}
+img[alt='logo'] {
+ width: 5%;
+ height: auto;
 }
 .WelcomeWrapper {
   height: 100vh;
@@ -15,67 +26,23 @@ body {
   linear-gradient(#01191E,#E1F9FE);
   background-blend-mode: overlay;
 }
-.logoWrapper {
-  background-color: #0D1E28;
-}
-img[alt='logo'] {
- width: 10%;
- height: auto;
-}
-/*  Float Down Animation:  */
-#Welcome,
-.buttonWrap {
-  opacity: 0;
-  transform: translateY(-18px);
-  will-change: transform, opacity;
-}
-
-@keyframes floatDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  60%  { transform: translateY(8px);  opacity: 1; }
-  to   { transform: translateY(0);     opacity: 1; }
-}
-
 #Welcome {
-  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
-  animation-delay: 200ms; /* start first */
-}
-
-.buttonWrap {
-  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
-  animation-delay: 1s; /* start later */
-}
-
-/* stagger for button */
-.buttonWrap button {
-  transform: translateY(8px);
-  opacity: 0;
-  animation: floatDown 900ms cubic-bezier(.2,.9,.2,1) both;
-}
-.buttonWrap button:nth-child(1){ animation-delay: 560ms; }
-.buttonWrap button:nth-child(2){ animation-delay: 680ms; }
-
-@media (prefers-reduced-motion: reduce) {
-  #Welcome, .buttonWrap, .buttonWrap button {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
+  background-color: rgba(0, 0, 0, 0.307); 
+  padding: 5%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #E1F9FE; 
+  position: relative;
 }
 ul {
-
   list-style-type: none;
   margin: 0;
-  padding-left: 0;
   overflow: hidden;
   background-color: #01191E;
+  display: flex;
+  justify-content: flex-start;
+  gap: 9rem;
 }
-
-ul li {
-  float: left;
-}
-
 ul li a {
   display: block;
   color: white;
@@ -83,7 +50,6 @@ ul li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 ul li a:hover {
   background-color: #7BE6F9;
   color: #01191E;
@@ -96,14 +62,6 @@ h2 {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: clamp(1rem, 1.3vw, 2rem);
   margin-top: 1rem;
-}
-#Welcome {
-  background-color: rgba(0, 0, 0, 0.307); 
-  padding: 5%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #E1F9FE; 
-  position: relative;
 }
 .line {
   height: 1px;
@@ -195,22 +153,94 @@ button:hover::after {
   transform: scale(0.1, 1);
 }
 .abline {
-   height: 1px;
+  height: 1px;
   background:linear-gradient(#C92545,#930656,#7BE6F9);
-   margin: 1rem auto; 
+  margin: 1rem auto; 
 }
-.womp,
-.abtText {
-  display: flex;              /* Enables side-by-side layout */
-  align-items: center;        /* Vertically center text with image */
-  gap: 15%;                   /* Space between image and text */
-  max-width: 70%;
-  margin: 0;
-  padding-top: 1em;
-  padding-left: 1em;
+.abtText, 
+ .womp
+ {
+  display: flex;
+  align-items: flex-start;         /* keep text at top */
+  justify-content: space-between;  /* spread text and image apart */
+  gap: 8rem;                       /* space between them */
+  max-width: 12000px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 1px;
+  flex-wrap: nowrap;               /* keep them side by side */
 }
-img[alt='me'] {
-  width: 50%;           
+
+/* make the text shrinkable */
+.abtText h2 {
+  flex: 1 1 0;                     /* allow growing & shrinking */
+  min-width: 0;                    /* CRITICAL: allow shrinkage instead of pushing image */
+  overflow-wrap: break-word;       /* wrap long text */
+  word-break: break-word;          /* fallback */
+  text-align: left;
+}
+
+/* keep the image a reasonable size */
+.abtText img[alt='me'] {
+  flex: 0 0 30%;                   /* fixed share of space */
+  max-width: 30%;
+  width: 30%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
+}
+
+/*  Float Down Animation:  */
+#Welcome,
+.buttonWrap {
+  opacity: 0;
+  transform: translateY(-18px);
+  will-change: transform, opacity;
+}
+@keyframes floatDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  60%  { transform: translateY(8px);  opacity: 1; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+#Welcome {
+  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
+  animation-delay: 200ms; /* start first */
+}
+.buttonWrap {
+  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
+  animation-delay: 1s; /* start later */
+}
+/* stagger for button */
+.buttonWrap button {
+  transform: translateY(8px);
+  opacity: 0;
+  animation: floatDown 900ms cubic-bezier(.2,.9,.2,1) both;
+}
+.buttonWrap button:nth-child(1){ animation-delay: 560ms; }
+.buttonWrap button:nth-child(2){ animation-delay: 680ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  #Welcome, .buttonWrap, .buttonWrap button {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+/* responsive fallback for smaller screens */
+@media (max-width: 800px) {
+  .abtText {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .abtText img[alt='me'] {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .abtText h2 {
+    text-align: center;
+  }
 }

@@ -13,35 +13,14 @@ img[alt='logo'] {
  width: 5%;
  height: auto;
 }
-.WelcomeWrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-
-  background-image: url('nnnoise.svg'),
-  linear-gradient(#01191E,#E1F9FE);
-  background-blend-mode: overlay;
-}
-#Welcome {
-  background-color: rgba(0, 0, 0, 0.307); 
-  padding: 5%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #E1F9FE; 
-  position: relative;
-}
 ul {
   list-style-type: none;
   margin: 0;
-  overflow: hidden;
-  background-color: #01191E;
+  padding: 0;
   display: flex;
-  justify-content: flex-start;
-  gap: 9rem;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #01191E;
 }
 ul li a {
   display: block;
@@ -87,75 +66,6 @@ h2 {
   top: 70%;
   left: 15%;
   width: 100%;
-}
-.buttonWrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  width: 100%;
-}
-button {
-  background-color: transparent;
-  border: none;
-  padding: 15px;
-  font-size: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  transition: all 0.3s;
-  position: relative;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #E1F9FE;
-  z-index: 1;
-}
-button span {
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s;
-}
-button::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  transform: scale(0.1, 1);
-  z-index: 1;
-}
-button:hover span {
-  letter-spacing: 2px;
-}
-button:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
-}
-button::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  transition: all 0.3s;
-  background: rgba(0, 0, 0, 0.307);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-button:hover::after {
-  opacity: 0; 
-  transform: scale(0.1, 1);
-}
-.abline {
-  height: 1px;
-  background:linear-gradient(#C92545,#930656,#7BE6F9);
-  margin: 1rem auto; 
 }
 .abtText, 
  .womp
@@ -234,13 +144,16 @@ button:hover::after {
     align-items: center;
     gap: 1.5rem;
   }
-
   .abtText img[alt='me'] {
     width: 100%;
     max-width: 400px;
   }
-
-  .abtText h2 {
+  .abtText h2{
+    text-align: center;
+  }
+  .womp {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 }

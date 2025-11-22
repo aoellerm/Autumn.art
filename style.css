@@ -1,9 +1,6 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   background-color: #0D1E28;
-  color: #E1F9FE;
+  color: #ffff;
 }
 .logoWrapper {
   background-color: #0D1E28;
@@ -42,8 +39,36 @@ h2 {
   font-size: clamp(1rem, 2vw, 2.5rem);
   margin-top: 1rem;
 }
-h3 {
+.contact {
+background-color: #E1F9FE;
+color: #FF4433;
+padding: 2rem;
+text-align: center;
+}
+.contactInfo {
+  color: #01191E;
+}
+form {
+  color: #FF4433;
+  padding: 10%;
+  padding-top: 5rem;
+  gap: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+input, textarea {
+    margin-bottom: 0.5em;
+    border-radius: 8px;
+    height: 40px;       /* Increase height */
+    padding: 10px;      /* Add space inside */
+    font-size: 16px;    /* Bigger text */
+}
 
+input[type="submit"]:hover {
+  background-color: #0D1E28;
+  color: #FF4433
 }
 .line-1 {
  height: 1px;
@@ -80,7 +105,7 @@ h3 {
   align-self: stretch;       /* make it stretch to the height of the .abtText container */
   background: linear-gradient(180deg,#FF4433,#930656,#7BE6F9);
   margin: 0;                 /* no extra vertical spacing inside flex */
-  margin-top: -174px;          /* pull it up 1px so it visually connects under .line-1 */
+  margin-top: -170px;          /* pull it up 1px so it visually connects under .line-1 */
   border-radius: 2px;        /* subtle rounding if you like */
 }
 /* keep the image a reasonable size */
@@ -112,6 +137,9 @@ footer {
   word-spacing: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  
 }
 /* responsive fallback for smaller screens */
 @media (max-width: 800px) {

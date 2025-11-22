@@ -5,13 +5,30 @@ html, body {
   padding: 0;
   color: #E1F9FE;
 }
-.logoWrapper {
-  background-color: #0D1E28;
-  padding: 8px;
+.line {
+  height: 1px;
+  background-color: white;
+  margin: 1rem auto;
 }
-img[alt='logo'] {
- width: 5%;
- height: auto;
+.line-1 {
+  top: 10%;
+  left: 5%;
+  width: 100%;
+}
+.line-2 {
+  top: 85%;
+  left: 5%;
+  width: 70%;
+}
+.line-3 {
+  top: 25%;
+  left: 15%;
+  width: 70%;
+}
+.line-4 {
+  top: 70%;
+  left: 15%;
+  width: 100%;
 }
 .WelcomeWrapper {
   overflow: hidden;
@@ -51,7 +68,7 @@ button {
   padding-right: 30px;
   transition: all 0.3s;
   position: relative;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #E1F9FE;
   z-index: 1;
 }
@@ -101,11 +118,11 @@ button:hover::after {
   transform: scale(0.1, 1);
 }
 h1 {
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: clamp(2.5rem, 3.5vw, 4.5rem);
 }
 h2 {
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: clamp(1rem, 1.3vw, 2rem);
   margin-top: 1rem;
 }

@@ -34,62 +34,55 @@ ul li a:hover {
   color: #01191E;
 }
 h1 {
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(3.5rem, 4vw, 5rem);
 }
 h2 {
-  font-family: Verdana, Tahoma, sans-serif;
-  font-size: clamp(1rem, 1.3vw, 2rem);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 2.5rem);
   margin-top: 1rem;
 }
-.line {
-  height: 1px;
-  background-color: white;
-  margin: 1rem auto;
+h3 {
+
 }
 .line-1 {
-  top: 10%;
-  left: 5%;
-  width: 100%;
-}
-.line-2 {
-  top: 85%;
-  left: 5%;
-  width: 70%;
-}
-.line-3 {
-  top: 25%;
-  left: 15%;
-  width: 70%;
-}
-.line-4 {
-  top: 70%;
-  left: 15%;
-  width: 100%;
+ height: 1px;
+ background: linear-gradient(90deg,#FF4433,#930656, #7BE6F9);
+ width: 100%;
+ margin: 1.1rem auto 0;
 }
 .abtText, 
  .womp
  {
   display: flex;
-  align-items: flex-start;         /* keep text at top */
+  align-items: stretch;         /* keep text at top was og flex-start */
   justify-content: space-between;  /* spread text and image apart */
-  gap: 8rem;                       /* space between them */
+  gap: 4rem;                       /* space between them */
   max-width: 12000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2em;
   padding-top: 1px;
   flex-wrap: nowrap;               /* keep them side by side */
+  position: relative; /*?*/
 }
-
 /* make the text shrinkable */
 .abtText h2 {
   flex: 1 1 0;                     /* allow growing & shrinking */
   min-width: 0;                    /* CRITICAL: allow shrinkage instead of pushing image */
   overflow-wrap: break-word;       /* wrap long text */
   word-break: break-word;          /* fallback */
+  align-self: flex-start;
   text-align: left;
 }
-
+.verticle-line {
+  width: 2px;                /* thickness of vertical line */
+  flex: 0 0 2px;
+  align-self: stretch;       /* make it stretch to the height of the .abtText container */
+  background: linear-gradient(180deg,#FF4433,#930656,#7BE6F9);
+  margin: 0;                 /* no extra vertical spacing inside flex */
+  margin-top: -174px;          /* pull it up 1px so it visually connects under .line-1 */
+  border-radius: 2px;        /* subtle rounding if you like */
+}
 /* keep the image a reasonable size */
 .abtText img[alt='me'] {
   flex: 0 0 30%;                   /* fixed share of space */
@@ -99,43 +92,26 @@ h2 {
   border-radius: 8px;
   object-fit: cover;
 }
-
-/*  Float Down Animation:  */
-#Welcome,
-.buttonWrap {
-  opacity: 0;
-  transform: translateY(-18px);
-  will-change: transform, opacity;
+footer a {
+  text-decoration: none;
+  color: #E1F9FE;
 }
-@keyframes floatDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  60%  { transform: translateY(8px);  opacity: 1; }
-  to   { transform: translateY(0);     opacity: 1; }
+footer a:hover {
+  color: #930656;
 }
-#Welcome {
-  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
-  animation-delay: 200ms; /* start first */
+footer {
+    grid-area: footer;
+    background-color: #0D1E28;
+    padding: 2em;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
 }
-.buttonWrap {
-  animation: floatDown 1s cubic-bezier(.16,.84,.44,1) both;
-  animation-delay: 1s; /* start later */
-}
-/* stagger for button */
-.buttonWrap button {
-  transform: translateY(8px);
-  opacity: 0;
-  animation: floatDown 900ms cubic-bezier(.2,.9,.2,1) both;
-}
-.buttonWrap button:nth-child(1){ animation-delay: 560ms; }
-.buttonWrap button:nth-child(2){ animation-delay: 680ms; }
-
-@media (prefers-reduced-motion: reduce) {
-  #Welcome, .buttonWrap, .buttonWrap button {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
+.spacing {
+  word-spacing: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 /* responsive fallback for smaller screens */
 @media (max-width: 800px) {
@@ -155,5 +131,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .verticle-line {
+    display:none;
   }
 }

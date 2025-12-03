@@ -4,6 +4,9 @@ html, body {
   margin: 0;
   padding: 0;
   color: #ffff;
+  background-image: url('nnnoise.svg'),
+  linear-gradient(#01191E,#e1f9fe);
+  background-blend-mode: overlay;
 }
 .line {
   height: 1px;
@@ -40,13 +43,9 @@ html, body {
   align-items: center;
   padding: 2rem;
   box-sizing: border-box;
-
-  background-image: url('nnnoise.svg'),
-  linear-gradient(#01191E,#E1F9FE);
-  background-blend-mode: overlay;
 }
 #Welcome {
-  background-color: rgba(0, 0, 0, 0.307); 
+  background-color: rgba(0, 0, 0, 0.549);  
   padding: 5%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -110,7 +109,7 @@ button::after {
   height: 100%;
   z-index: 0;
   transition: all 0.3s;
-  background: rgba(0, 0, 0, 0.307);
+  background: rgba(0, 0, 0, 0.549); 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 button:hover::after {

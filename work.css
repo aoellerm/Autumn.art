@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('nnnoise.svg'),
+  linear-gradient(#01191E,#e1f9fe);
+  background-blend-mode: overlay;
+  color: #ffff;
+}
+.line {
+  height: 1px;
+  background-color: white;
+  margin: 1rem auto;
+}
+.line-1 {
+  top: 10%;
+  left: 5%;
+  width: 100%;
+}
+.line-2 {
+  top: 85%;
+  left: 5%;
+  width: 70%;
+}
+.line-3 {
+  top: 25%;
+  left: 15%;
+  width: 70%;
+}
+.line-4 {
+  top: 70%;
+  left: 15%;
+  width: 100%;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  display: block;
+  transform-origin: center;
+}
+
+/* Create the X */
+.close span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Optional: circle animation style */
+.close .circle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+.close:hover span {
+  background-color: #FF4433;
+}
+
+.close:hover .circle path {
+  stroke: #FF4433;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(3rem, 4vw, 5rem);
+  text-align:center;
+  font-size: 40px;
+}
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  margin-top: 1rem;
+}
+.box1 {
+  overflow-x: hidden;
+  color: #FF4433;
+  text-align: center;
+  text-align: center;
+   box-sizing: border-box;
+   padding: 5rem;
+   width: 100%;
+   margin: 0;
+  }
+  .box2 {
+  background-color: rgba(0, 0, 0, 0.307); 
+  padding: 5%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center; 
+  position: relative;
+  }
+  .descrp {
+    padding: 20px;
+    color:  #fff;
+  }
+
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color:#01191E;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: #01191E;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+ul li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.549); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  ul li div {
+    width: 250px;
+  }
+  ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}

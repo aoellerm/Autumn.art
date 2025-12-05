@@ -22,30 +22,33 @@
 </ul>
    <main>
     <div class="contact">
+      <div class="box">
+      <div class="line line-4" ></div>
+      <div class="line line-3" ></div>
  <h1>Contact Me</h1>
-    <div class='contactInfo'>
  <h3>Want to contact me about my work? Fill out the form below!</h3>
-  </div>
+  <div class="line line-2" ></div>
+      <div class="line line-4" ></div>
     </div>
-  <div class="form">
-    <form method ="post" action="https://webdevbasics.net/scripts/pacific.php">
-    <label for="myFName" >First Name:</label>
-    <input type="text" id="myFName" name="myFName" required>
+     </div>
+    <div class="formContainer">
+  <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
 
-    <label for="myLName" >Last Name:</label>
-    <input type="text" id="myLName" name="myLName" >
+    <input type="text" id="myFName" name="myFName" placeholder="First Name" required>
 
-    <label for="myEmail" >E-mail:</label>
-    <input type="email" id="myEmail" name="myEmail" required>
+    <input type="text" id="myLName" name="myLName" placeholder="Last Name">
 
-    <label for="myPhone" >Phone Number:</label>
-    <input type="tel" id="myPhone" name="myPhone" maxlength="12" >
+    <input type="email" id="myEmail" name="myEmail" placeholder="E-mail" required>
 
-    <label for="myComments" >Subject:</label>
-    <textarea id="myComments" name="myComments" rows="2" cols="30"></textarea>
-    <input type="submit" value="Submit" required>
-    </form>
-  </div>
+    <input type="tel" id="myPhone" name="myPhone" placeholder="Phone Number" maxlength="12">
+
+    <textarea id="myComments" name="myComments" rows="2" placeholder="Subject"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
   </main>
 
   <footer>

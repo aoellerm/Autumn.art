@@ -7,9 +7,7 @@
 }
 
 body {
-  background-image: url('nnnoise.svg'),
-  linear-gradient(#01191E,#e1f9fe);
-  background-blend-mode: overlay;
+background-color: #01191E;
   color: #ffff;
 }
 .line {
@@ -138,13 +136,13 @@ ul li {
   position:relative;
   list-style-type: none;
   width: 6px;
-  background-color:#01191E;
+  background-color: #ffff;
   margin: 0 auto;
   padding-top: 50px;
 }
 
 ul li::after {
-  background: #01191E;
+  background: #ffff;
   content: '';
   width: 25px;
   height: 25px;

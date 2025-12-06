@@ -79,9 +79,10 @@ video {
 .formContainer {
   background-color: #334e5448;
   border: 2px solid #fff;
-  width: 60%;
-  max-width: 800px;
-  margin: 2rem auto;
+  width: 70%;
+  height: auto;
+  max-width: 10000px;
+  margin: 5rem auto;
   padding: 2rem;
   border-radius: 30px; 
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
@@ -98,9 +99,9 @@ form textarea {
   padding: 0.8rem 1rem;
   border-radius: 10px;
   border: 2px solid #0b1a23;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   background: #0b1a23;
-  color: #01191E;
+  color: #fff;
 }
 
 form input:focus,
@@ -155,7 +156,7 @@ form input[type="submit"]:hover {
 .box {
   background-color: rgba(0, 0, 0, 0.549);  
   border: 2px solid #fff;
-  padding: 5%;
+  padding: 2%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #E1F9FE; 
@@ -167,7 +168,7 @@ form input[type="submit"]:hover {
   gap: 20px;                  /* space between cards */
   flex-wrap: wrap;            /* wrap to next line on small screens */
   justify-content: center;    /* center the row */
-  padding: 20px;
+  padding: 5rem;
 }
 
 /* Individual image card */
@@ -217,20 +218,21 @@ form input[type="submit"]:hover {
   background-color: #01191E;
   color: #f0f0f0;
 }
-
-.abtText, 
- .womp
+.abtText
  {
   display: flex;
   align-items: stretch;         /* keep text at top was og flex-start */
   justify-content: space-between;  /* spread text and image apart */
-  gap: 4rem;                       /* space between them */
-  max-width: 12000px;
+  gap: 5rem;                       /* space between them */
   margin: 0 auto;
-  padding: 2em;
-  padding-top: 1px;
+  padding: 4rem;
+  padding-top: 0;
   flex-wrap: nowrap;               /* keep them side by side */
   position: relative; /*?*/
+}
+.womp{
+  text-align: center;
+  justify-content: center;
 }
 /* make the text shrinkable */
 .abtText h2 {
@@ -242,22 +244,34 @@ form input[type="submit"]:hover {
   text-align: left;
 }
 .verticle-line {
-  width: 2px;                /* thickness of vertical line */
-  flex: 0 0 2px;
-  align-self: stretch;       /* make it stretch to the height of the .abtText container */
+  width: 2px;
   background: #fff;
-  margin: 0;                 /* no extra vertical spacing inside flex */
-  margin-top: -170px;          /* pull it up 1px so it visually connects under .line-1 */
-  border-radius: 2px;        /* subtle rounding if you like */
+  align-self: stretch;
+  flex: 0 0 auto;
+  margin: 0;
+  border-radius: 2px;
+
+  /* Reset anything the .line class might apply */
+  height: auto;
+  position: static;
+   margin-top: -1em; /* adjust until it fits perfectly */
+  margin-bottom: 0;   
 }
 /* keep the image a reasonable size */
 .abtText img[alt='me'] {
+  background-color: rgba(0, 0, 0, 0.549);  
+  border: 2px solid #fff;
+  padding: 2%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #E1F9FE; 
   flex: 0 0 30%;                   /* fixed share of space */
   max-width: 30%;
   width: 30%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  padding-top: 4rem;
 }
 footer a {
   text-decoration: none;
@@ -293,6 +307,7 @@ footer {
   .abtText img[alt='me'] {
     width: 100%;
     max-width: 400px;
+    align-items: center;
   }
   .abtText h2{
     text-align: center;

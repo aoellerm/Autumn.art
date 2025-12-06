@@ -48,20 +48,22 @@ h2 {
   text-align: center;
 }
   .feat {
-  text-align: center;
-  text-align: center;
-  background: #E1F9FE;
-  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.549);  
+  border: 2px solid #fff;
+  padding: 1%;
   width: 50%;
-  margin: 1rem auto; /* centers box itself*/
-  padding: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #E1F9FE; 
+  position: relative;
   }
 .border {
-  padding: 2rem;
+  padding: 4rem;
   color: #0D1E28;
   display: flex;
   justify-content: center;   /* centers horizontally */
   align-items: center;       /* centers vertically */
+  text-align: center;
   height: auto;             /* full viewport height */
 }
 .video {
@@ -70,7 +72,7 @@ h2 {
   text-align: center;        /* centers the <h3> text under the video */
   background: #E1F9FE;
   border-radius: 8px;
-  padding: 0 auto;
+  padding: 4em auto;
 }
 video {
   width: 50%;
@@ -254,7 +256,7 @@ form input[type="submit"]:hover {
   /* Reset anything the .line class might apply */
   height: auto;
   position: static;
-   margin-top: -1em; /* adjust until it fits perfectly */
+  margin-top: -1em; /* adjust until it fits perfectly */
   margin-bottom: 0;   
 }
 /* keep the image a reasonable size */

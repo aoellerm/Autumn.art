@@ -7,7 +7,8 @@
 }
 
 body {
-background-color: #01191E;
+ background-image: url('nnnoise.svg'),
+  linear-gradient(#01191E,#e1f9fe);
   color: #ffff;
 }
 .line {
@@ -96,36 +97,37 @@ h2 {
   font-size: clamp(1rem, 2vw, 2.5rem);
   margin-top: 1rem;
 }
+h3 {
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-top: 1rem;
+} 
 .box1 {
   overflow-x: hidden;
-  color: #FF4433;
   text-align: center;
   text-align: center;
-   box-sizing: border-box;
-   padding: 5rem;
-   width: 100%;
-   margin: 0;
+  box-sizing: border-box;
+  padding: 5rem;
+  width: 100%;
+  margin: 0;
   }
   .box2 {
-  background-color: rgba(0, 0, 0, 0.307); 
-  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.549);  
+  border: 2px solid #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  text-align: center; 
-  position: relative;
+  text-align: center;
+  color: #E1F9FE; 
+    overflow-x: hidden;
+  text-align: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5rem;
+  width: 100%;
+  margin: 0;
   }
   .descrp {
-    padding: 20px;
-    color:  #fff;
-  }
-  .border {
-  color: #FF4433;
-  text-align: center;
-  text-align: center;
-  background: #E1F9FE;
-  border-radius: 7px;
-  width: 100%;
-  margin: 0 auto; /* centers box itself*/
-  padding: .5rem;
+  padding: 20px;
+  color:  #fff;
   }
 
 ul {

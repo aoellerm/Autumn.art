@@ -124,6 +124,32 @@
   -o-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
+.border {
+  padding: 2rem;
+  color: #0D1E28;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  height: auto;             /* full viewport height */
+}
+.box {
+  background-color: rgba(0, 0, 0, 0.549);  
+  border: 2px solid #fff;
+  padding: 2%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #E1F9FE; 
+  position: relative;
+}
+  .box1 {
+    padding: 2rem;
+    margin: 0;
+  }
+  .box2 {
+    background-color: #bcedf7; /* white inner box */
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
 body {
  background-image: url('nnnoise.svg'),
   linear-gradient(#01191E,#e1f9fe);

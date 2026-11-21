@@ -516,3 +516,33 @@ color: #FF4433;
     /*250+45-6*/
   }
 }
+footer a {
+  text-decoration: none;
+  color: #E1F9FE;
+}
+footer a:hover {
+  color: #FF4433;
+}
+footer {
+    grid-area: footer;
+    background-color: #0D1E28;
+    padding: 2em;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.spacing {
+  word-spacing: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.border {
+  padding: 4rem;
+  color: #0D1E28;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  text-align: center;
+  height: auto;             /* full viewport height */
+}
